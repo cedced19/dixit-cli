@@ -1,0 +1,84 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 65%;
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #5f5f66;
+}
+
+header {
+  padding: 1em 0 2em 0;
+  background: #3f3f46;
+  margin-bottom:1em;
+}
+
+.command {
+  width: 69%;
+  margin: 0 auto;
+}
+
+.command input {
+  width: 100%;
+  color: #C8C8C8;
+  padding: 8px;
+  font-size: 2em;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  border:0;
+  background: #5f5f66;
+}
+
+textarea, input {
+  outline: none;
+  padding: 5px;
+}
+
+em, footer a {
+  color: rgb(245, 245, 209);
+  text-decoration: none
+}
+
+footer {
+  width: 100%;
+  font-size: 2em;
+  color: #2f2f36;
+  padding: 1em 0;
+  text-align: center;
+}
+
+header h1 {
+  color: #C8C8C8;
+  font-weight: normal;
+  font-size: 3.5em;
+  padding:0 10em .1em 0;
+  margin:0;
+  background-image: url('/images/magnifier.svg');
+  background-size: .5em;
+  background-repeat: no-repeat;
+  background-position: 2.2em 30%;
+}
+
+main {
+  width: 69%;
+  margin: 0 auto;
+}
+
+main pre{
+  width: 100%;
+  color: #C8C8C8;
+  padding: 8px;
+  font-size: 2em;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  border:0;
+  background: #5f5f66;
+}
+
+::selection {
+    color: #5f5f66;
+    background: #C8C8C8;
+}
