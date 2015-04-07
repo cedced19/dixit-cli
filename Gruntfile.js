@@ -9,6 +9,7 @@ module.exports = function(grunt) {
           src: [
             'index.html',
             'vendor/**/*.*',
+            'lib/*.*',
             'package.json',
             'favicon.ico',
             'dixit.js',

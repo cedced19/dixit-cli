@@ -1,6 +1,6 @@
 {
   "name": "dixit-cli",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Console in a web page!",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -16,11 +16,11 @@
     "time-grunt": "^1.0.0"
   },
   "dependencies": {
-    "ansi-html": "0.0.4",
     "check-update": "0.0.7",
     "colors": "^1.0.3",
     "commander": "^2.5.0",
     "hapi": "^8.1.0",
+    "opn": "^1.0.1",
     "socket.io": "^1.0.6"
   },
   "scripts": {
@@ -33,7 +33,9 @@
   "bugs": {
     "url": "https://github.com/cedced19/dixit-cli/issues"
   },
-  "bin": {},
+  "bin": {
+      "dixit": "dixit.js"
+  },
   "homepage": "https://github.com/cedced19/dixit-cli",
   "keywords": [],
   "author": {

@@ -6,7 +6,7 @@ var hapi = require('hapi'),
     program = require('commander'),
     pkg = require('./package.json'),
     port = 7775,
-    ansi = require('ansi-html'), 
+    ansi = require('./lib/ansi-html'), 
     exec = require('child_process').exec,
     colors = require('colors');
 
@@ -54,16 +54,26 @@ app.start(function() {
             console.log(defaultMessage);
         }
     });
+    require('opn')('http://localhost:' + port);
     console.log('Server running at\n  => ' + colors.green('http://localhost:' + port) + '\nCTRL + C to shutdown');
 });
 
 
 var io = require('socket.io').listen(app.listener);
 io.sockets.on('connection', function(socket){
-      socket.on('do', function (data) {
-        exec(data.command, function (error, stdout, stderr) {
-         socket.emit('log', {log: ansi(stdout)});
-         console.log(stdout);
-      });
+    socket.emit('path', {path: process.cwd()});
+    
+    socket.on('do', function (data) {
+       if (data.path === null){
+           data.path = process.cwd();
+       } 
+       exec(data.command, {cwd: data.path}, function (error, stdout, stderr) {
+           if (error !== null){
+               socket.emit('log', {log: ansi(stdout), err: ansi(colors.red(error))});
+           } else {
+               socket.emit('log', {log: ansi(stdout), err: null});
+           }
+       });
     });
+
 });

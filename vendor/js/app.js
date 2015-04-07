@@ -3,15 +3,20 @@ $(document).ready(function() {
   
   $(document).keypress(function(e) {
         if(e.which == 13) {
-            socket.emit('do', {command: document.getElementById('command').value});
+            socket.emit('do', {command:  $('#command').val(), path:  $('#path').val()});
         }
   });
     
   socket.on('log', function (data){
-      $('#log').html(data.log);
-      console.log(data);
+      if (data.err  !== null){
+        $('#log').html(data.err + data.log);
+      }else{
+        $('#log').html(data.log);   
+      }
   });
-
-
-
+    
+  socket.on('path', function (data){
+      $('#path').val(data.path);
+  });
+  
 });

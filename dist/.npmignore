@@ -1,3 +1,4 @@
 .npmignore
 vendor/js/app.js
+vendor/js/jquery.min.js
 vendor/css/main.css
