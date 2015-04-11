@@ -69,7 +69,7 @@ main {
   margin: 0 auto;
 }
 
-main pre{
+main pre {
   width: 100%;
   color: #C8C8C8;
   padding: 8px;
@@ -78,6 +78,15 @@ main pre{
   border-radius: 3px;
   border:0;
   background: #5f5f66;
+}
+
+main h2 {
+  color: #C8C8C8;
+  font-weight: normal;
+  font-size: 2.5em;
+  padding:0 10em .1em 0;
+  margin:0;
+  display: none;
 }
 
 ::selection {

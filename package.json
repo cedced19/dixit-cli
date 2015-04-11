@@ -16,7 +16,7 @@
     "time-grunt": "^1.0.0"
   },
   "dependencies": {
-    "check-update": "0.0.7",
+    "check-update": "0.0.8",
     "colors": "^1.0.3",
     "commander": "^2.5.0",
     "hapi": "^8.1.0",
@@ -34,7 +34,7 @@
     "url": "https://github.com/cedced19/dixit-cli/issues"
   },
   "bin": {
-      "dixit": "dixit.js"
+    "dixit": "dixit.js"
   },
   "homepage": "https://github.com/cedced19/dixit-cli",
   "keywords": [],
