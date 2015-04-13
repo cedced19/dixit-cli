@@ -37,7 +37,17 @@
     "dixit": "dixit.js"
   },
   "homepage": "https://github.com/cedced19/dixit-cli",
-  "keywords": [],
+  "keywords": [
+      "dixit",
+      "cli",
+      "command",
+      "do",
+      "fast",
+      "web",
+      "ui",
+      "ux",
+      "interface"
+  ],
   "author": {
     "name": "Cédric",
     "email": "cedced19@gmail.com",

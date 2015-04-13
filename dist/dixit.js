@@ -7,7 +7,7 @@ var hapi = require('hapi'),
     pkg = require('./package.json'),
     port = 7775,
     ansi = require('./lib/ansi-html'), 
-    exec = require('child_process').exec,
+    spawn = require('child_process').spawn,
     colors = require('colors');
 
 program

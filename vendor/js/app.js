@@ -8,10 +8,8 @@ $(document).ready(function() {
   });
     
   socket.on('log', function (data){
-      if ($('#log').html() == ''){
+      if ($('#log').html() != ''){
        $('h2').show();
-       $('#latest').html('There are no content to display.');
-      } else {
        $('#latest').html($('#log').html());
       }
       
