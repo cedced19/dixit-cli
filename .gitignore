@@ -2,5 +2,7 @@ node_modules
 bower_components
 .tmp
 dist/vendor/css/main.css
+dist/vendor/css/loader.css
 dist/vendor/js/app.js
 dist/vendor/js/jquery.min.js
+.idea

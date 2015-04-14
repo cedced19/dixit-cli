@@ -93,3 +93,8 @@ main h2 {
     color: #5f5f66;
     background: #C8C8C8;
 }
+
+.ball-clip-rotate {
+    text-align: center;
+    display: none;
+}
