@@ -1,51 +1,51 @@
 var path = require('path');
 module.exports = function(grunt) {
-  require('time-grunt')(grunt);
-  var config = {
-    copy: {
-      src: {
-        files: [{
-          expand: true,
-          src: [
-            'index.html',
-            'vendor/**/*.*',
-            'lib/*.*',
-            'package.json',
-            'favicon.ico',
-            'dixit.js',
-            'README.md'
-          ],
-          dest: 'dist/'
-        }]
-      }
-    },
-  useminPrepare: {
-      html: 'index.html',
-      options: {
-                    flow: {
-                      html: {
-                          steps: {
+    require('time-grunt')(grunt);
+    var config = {
+        copy: {
+            src: {
+                files: [{
+                    expand: true,
+                    src: [
+                        'index.html',
+                        'vendor/**/*.*',
+                        'lib/*.*',
+                        'package.json',
+                        'favicon.ico',
+                        'dixit.js',
+                        'README.md'
+                    ],
+                    dest: 'dist/'
+                }]
+            }
+        },
+        useminPrepare: {
+            html: 'index.html',
+            options: {
+                flow: {
+                    html: {
+                        steps: {
                             js: ['concat', 'uglifyjs'],
-                              css: [
-                                  {
-                                      name: 'uncss',
-                                      createConfig: function (context, block) {
-                                          context.outFiles = [block.dest];
-                                          return {
-                                              files: [{
-                                                  dest: path.join(context.outDir, block.dest),
-                                                  src: ['index.html']
-                                              }]
-                                          };
-                                      }
-                                  },
-                                  {
+                            css: [
+                                {
+                                    name: 'uncss',
+                                    createConfig: function (context, block) {
+                                        context.outFiles = [block.dest];
+                                        return {
+                                            files: [{
+                                                dest: path.join(context.outDir, block.dest),
+                                                src: ['index.html']
+                                            }]
+                                        };
+                                    }
+                                },
+                                {
                                     name: 'autoprefixer',
                                     createConfig: function (context, block) {
                                         context.outFiles = [block.dest];
                                         return {
-                                          options: {
-                                              browsers: ['last 2 versions', 'ie 8', 'ie 9']
+                                            options: {
+                                                browsers: ['last 2 versions', 'ie 8', 'ie 9']
                                             },
                                             files: [{
                                                 src: path.join(context.inDir, block.dest),
@@ -55,32 +55,32 @@ module.exports = function(grunt) {
                                     }
                                 },
                                 'cssmin'
-                              ]
-                          },
-                          post: {}
-                      }
-                  }
-              }
-          },
-  usemin: {
-    html: 'dist/*.html'
-  },
-  htmlmin: {
-        dist: {
-          options: {
-            removeComments: true,
-            collapseWhitespace: true
-          },
-          files: {
-            'dist/index.html': 'dist/index.html'
-          }
-      }
-  }
-};
+                            ]
+                        },
+                        post: {}
+                    }
+                }
+            }
+        },
+        usemin: {
+            html: 'dist/*.html'
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'dist/index.html': 'dist/index.html'
+                }
+            }
+        }
+    };
 
-  grunt.initConfig(config);
+    grunt.initConfig(config);
 
-  // Load all Grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify', 'uncss', 'autoprefixer', 'cssmin', 'usemin', 'htmlmin']);
+    // Load all Grunt tasks
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    grunt.registerTask('default', ['copy', 'useminPrepare', 'concat', 'uglify', 'uncss', 'autoprefixer', 'cssmin', 'usemin', 'htmlmin']);
 };

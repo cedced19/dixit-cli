@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Console in a web page!">
-    <meta name="author" content="cedced19">
-    <link rel="icon" href="/favicon.ico">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Console in a web page!">
+        <meta name="author" content="cedced19">
+        <link rel="icon" href="/favicon.ico">
 
-    <title>Dixit</title>
-    
-    <!-- build:css /vendor/css/styles.css -->
-    <link rel="stylesheet" href="/vendor/css/main.css" type="text/css">
-    <link rel="stylesheet" href="/vendor/css/loaders.css" type="text/css">
-    <!-- endbuild -->
-  </head>
+        <title>Dixit</title>
 
-<body>
-     <header>
-      <section class="command">
-        <h1>Dixit</h1>
-        <label for="command">Command:</label>
-        <input type="text" name="command" tabindex="0" id="command"/>
-        <label for="path">Path:</label>
-        <input type="text" name="path" tabindex="0" id="path"/>
-      </section>
-    </header>
-    <main>
-        <h2>Result:</h2>
-        <div id="loader" class="ball-clip-rotate"><div></div></div>
-        <pre id="log"></pre>
-        <h2>Latest:</h2>
-        <pre id="latest"></pre>
-    </main>
-    <footer>
-        <span>
-            <p>Cedced19 - <a href="http://cedced19.github.io/license/">MIT</a></p>
-        </span>
-    </footer>
-    <script src="/socket.io/socket.io.js" type="text/javascript"></script>
-    <!-- build:js /vendor/js/scripts.js -->
-    <script src="/vendor/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/vendor/js/app.js" type="text/javascript"></script>
-    <!-- endbuild -->
-  </body>
+        <!-- build:css /vendor/css/styles.css -->
+        <link rel="stylesheet" href="/vendor/css/main.css" type="text/css">
+        <link rel="stylesheet" href="/vendor/css/loaders.css" type="text/css">
+        <!-- endbuild -->
+    </head>
+
+    <body>
+        <header>
+            <section class="command">
+                <h1>Dixit</h1>
+                <label for="command">Command:</label>
+                <input type="text" name="command" tabindex="0" id="command"/>
+                <label for="path">Path:</label>
+                <input type="text" name="path" tabindex="0" id="path"/>
+            </section>
+        </header>
+        <main>
+            <h2>Result:</h2>
+            <div id="loader" class="ball-clip-rotate"><div></div></div>
+            <pre id="log"></pre>
+            <h2>Latest:</h2>
+            <pre id="latest"></pre>
+        </main>
+        <footer>
+            <span>
+                <p>Cedced19 - <a href="http://cedced19.github.io/license/">MIT</a></p>
+            </span>
+        </footer>
+        <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+        <!-- build:js /vendor/js/scripts.js -->
+        <script src="/vendor/js/jquery.min.js" type="text/javascript"></script>
+        <script src="/vendor/js/app.js" type="text/javascript"></script>
+        <!-- endbuild -->
+    </body>
 </html>

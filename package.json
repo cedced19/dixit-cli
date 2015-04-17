@@ -38,15 +38,15 @@
   },
   "homepage": "https://github.com/cedced19/dixit-cli",
   "keywords": [
-      "dixit",
-      "cli",
-      "command",
-      "do",
-      "fast",
-      "web",
-      "ui",
-      "ux",
-      "interface"
+    "dixit",
+    "cli",
+    "command",
+    "do",
+    "fast",
+    "web",
+    "ui",
+    "ux",
+    "interface"
   ],
   "author": {
     "name": "Cédric",

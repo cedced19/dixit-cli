@@ -11,13 +11,13 @@ var hapi = require('hapi'),
     colors = require('colors');
 
 program
-  .version(pkg.version)
-  .option('-p, --port [number]', 'specified the port')
-  .parse(process.argv);
+    .version(pkg.version)
+    .option('-p, --port [number]', 'specified the port')
+    .parse(process.argv);
 
 
 if (!isNaN(parseFloat(program.port)) && isFinite(program.port)){
-  port = program.port;
+    port = program.port;
 }
 app.connection({ port: port });
 
@@ -62,18 +62,18 @@ app.start(function() {
 var io = require('socket.io').listen(app.listener);
 io.sockets.on('connection', function(socket){
     socket.emit('path', {path: process.cwd()});
-    
+
     socket.on('do', function (data) {
-       if (data.path === null){
-           data.path = process.cwd();
-       } 
-       exec(data.command, {cwd: data.path}, function (error, stdout, stderr) {
-           if (error !== null){
-               socket.emit('log', {log: ansi(stdout), err: ansi(colors.red(error))});
-           } else {
-               socket.emit('log', {log: ansi(stdout), err: null});
-           }
-       });
+        if (data.path === null){
+            data.path = process.cwd();
+        } 
+        exec(data.command, {cwd: data.path}, function (error, stdout, stderr) {
+            if (error !== null){
+                socket.emit('log', {log: ansi(stdout), err: ansi(colors.red(error))});
+            } else {
+                socket.emit('log', {log: ansi(stdout), err: null});
+            }
+        });
     });
 
 });

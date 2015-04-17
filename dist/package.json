@@ -10,6 +10,7 @@
     "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-htmlmin": "0.4.0",
     "grunt-contrib-uglify": "0.8.0",
+    "grunt-lintspaces": "^0.6.2",
     "grunt-uncss": "0.4.0",
     "grunt-usemin": ">=3.0.0",
     "matchdep": "~0.3.0",
@@ -38,15 +39,15 @@
   },
   "homepage": "https://github.com/cedced19/dixit-cli",
   "keywords": [
-      "dixit",
-      "cli",
-      "command",
-      "do",
-      "fast",
-      "web",
-      "ui",
-      "ux",
-      "interface"
+    "dixit",
+    "cli",
+    "command",
+    "do",
+    "fast",
+    "web",
+    "ui",
+    "ux",
+    "interface"
   ],
   "author": {
     "name": "Cédric",
