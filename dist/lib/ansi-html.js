@@ -46,16 +46,14 @@ module.exports = function (text) {
     if (!re_ansi.test(text)) {
         return text;
     }
-    // Cache opened sequence.
-        var ansiCodes = [];
-    // Replace with markup.
+    var ansiCodes = [];
     var ret = text.replace(/\033\[(\d+)*m/g, function (match, seq) {
         var ot = openTags[seq];
         if (ot) {
-                if (!!~ansiCodes.indexOf(seq)) {
-                    ansiCodes.pop();
-                    return '</span>';
-                    }
+            if (!!~ansiCodes.indexOf(seq)) {
+                ansiCodes.pop();
+                return '</span>';
+            }
             ansiCodes.push(seq);
             return ot[0] == '<' ? ot : '<span style="' + ot + ';">';
         }

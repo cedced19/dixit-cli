@@ -1,62 +1,60 @@
 {
-  "name": "dixit-cli",
-  "version": "0.0.2",
-  "description": "Console in a web page!",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-autoprefixer": "^2.2.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-copy": "~0.8.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-htmlmin": "0.4.0",
-    "grunt-contrib-uglify": "0.8.0",
-    "grunt-uncss": "0.4.0",
-    "grunt-usemin": ">=3.0.0",
-    "matchdep": "~0.3.0",
-    "time-grunt": "^1.0.0"
-  },
-  "dependencies": {
-    "check-update": "0.0.8",
-    "colors": "^1.0.3",
-    "commander": "^2.5.0",
-    "hapi": "^8.1.0",
-    "opn": "^1.0.1",
-    "socket.io": "^1.0.6"
-  },
-  "scripts": {
-    "start": "dixit.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/cedced19/dixit-cli"
-  },
-  "bugs": {
-    "url": "https://github.com/cedced19/dixit-cli/issues"
-  },
-  "bin": {
-    "dixit": "dixit.js"
-  },
-  "homepage": "https://github.com/cedced19/dixit-cli",
-  "keywords": [
-    "dixit",
-    "cli",
-    "command",
-    "do",
-    "fast",
-    "web",
-    "ui",
-    "ux",
-    "interface"
-  ],
-  "author": {
-    "name": "Cédric",
-    "email": "cedced19@gmail.com",
-    "url": "https://github.com/cedced19/dixit-cli"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://cedced19.github.io/license/"
-    }
-  ]
+    "name": "dixit-cli",
+    "version": "0.0.2",
+    "description": "Console in a web page!",
+    "devDependencies": {
+        "gulp": "^3.8.10",
+        "gulp-htmlmin": "^1.1.1",
+        "gulp-if": "^1.2.5",
+        "gulp-minify-css": "^1.1.1",
+        "gulp-uglify": "^1.2.0",
+        "gulp-uncss": "^1.0.1",
+        "gulp-useref": "^1.1.2",
+        "gulp-util": "^3.0.2",
+        "gulp-autoprefixer": "^2.3.1"
+    },
+    "dependencies": {
+        "check-update": "0.0.8",
+        "colors": "^1.0.3",
+        "commander": "^2.5.0",
+        "hapi": "^8.1.0",
+        "opn": "^1.0.1",
+        "socket.io": "^1.0.6"
+    },
+    "scripts": {
+        "start": "dixit.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/cedced19/dixit-cli"
+    },
+    "bugs": {
+        "url": "https://github.com/cedced19/dixit-cli/issues"
+    },
+    "bin": {
+        "dixit": "dixit.js"
+    },
+    "homepage": "https://github.com/cedced19/dixit-cli",
+    "keywords": [
+        "dixit",
+        "cli",
+        "command",
+        "do",
+        "fast",
+        "web",
+        "ui",
+        "ux",
+        "interface"
+    ],
+    "author": {
+        "name": "Cédric",
+        "email": "cedced19@gmail.com",
+        "url": "https://github.com/cedced19/dixit-cli"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://cedced19.github.io/license/"
+        }
+    ]
 }
