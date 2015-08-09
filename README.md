@@ -2,13 +2,10 @@
 
 Console in a web page!
 
-Work in progress!
-
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/cedced19/dixit-cli.svg)](https://travis-ci.org/cedced19/dixit-cli)
 
 
-![demo](https://raw.githubusercontent.com/cedced19/dixit-cli/master/demo.png)
+![Demo](https://raw.githubusercontent.com/cedced19/dixit-cli/master/demo.png)
 
 ## Installation and usage
 ```bash
