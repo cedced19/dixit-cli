@@ -5,8 +5,8 @@ var hapi = require('hapi'),
     fs = require('fs'),
     program = require('commander'),
     pkg = require('./package.json'),
-    port = 7775,
-    ansi = require('./lib/ansi-html'), 
+    port = 7778,
+    ansi = require('./lib/ansi-html'),
     exec = require('child_process').exec,
     colors = require('colors');
 
@@ -66,7 +66,7 @@ io.sockets.on('connection', function(socket){
     socket.on('do', function (data) {
         if (data.path === null){
             data.path = process.cwd();
-        } 
+        }
         exec(data.command, {cwd: data.path}, function (error, stdout, stderr) {
             if (error !== null){
                 socket.emit('log', {log: ansi(stdout), err: ansi(colors.red(error))});
